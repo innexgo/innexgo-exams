@@ -1,0 +1,21 @@
+[package]
+name = "innexgo-hours-service"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+warp = "0.3.1"
+clap = "3.0.0-beta.5"
+tokio = { version = "1.12.0", features = ["full"] }
+serde = { version = "1.0.130", features = ["derive"] }
+serde_json = "1.0.68"
+mail-service-api = {version = "*", git = "https://github.com/innexgo/mail-service-api", features=["client"]}
+auth-service-api = {version = "*", git = "https://github.com/innexgo/auth-service-api", features=["client"]}
+
+innexgo-hours-api = {version = "*", git = "https://github.com/innexgo/innexgo-hours-api"}
+tokio-postgres = "0.7.3"
+rand = "0.8.4"
+base64-url = "1.4.10"
+either = "1.6.1"
